@@ -4,7 +4,7 @@ class ShortenedUser < ActiveRecord::Base
     foreign_key: :user_id,
     class_name: :User
 
-  belongs_to :shortened_url,
+  has_many :shortened_url,
     primary_key: :id,
     foreign_key: :shortened_url_id,
     class_name: :ShortenedUrl
